@@ -360,6 +360,7 @@
 \newcommand*{\ecvemail}[2][]{\def\ecv@emailid{#2}\def\ecv@emailtext{#1}}
 \newcommand*{\ecvlinkedin}[1]{\def\ecv@linkedin{#1}}
 \newcommand*{\ecvgithub}[1]{\def\ecv@github{#1}}
+\newcommand*{\ecvskype}[1]{\def\ecv@skype{#1}}
 \newcommand*{\ecvhomepage}[1]{\def\ecv@homepage{#1}}
 \newcommand*{\ecvnationality}[1]{\def\ecv@nationality{#1}}
 \newcommand*{\ecvdateofbirth}[1]{\def\ecv@birth{#1}}
@@ -389,6 +390,7 @@
 \ecvemail{}
 \ecvlinkedin{}
 \ecvgithub{}
+\ecvskype{}
 \ecvhomepage{}
 \ecvgender{}
 \ecvdateofbirth{}
@@ -407,6 +409,7 @@ $\begin{array}{@{}l}\includegraphics[width=\ecv@iconwidth]{ic_address}\end{array
 \ifx\@empty\ecv@mobile\else
 $\begin{array}{@{}l}\includegraphics[width=\ecv@iconwidth]{ic_mobile}\end{array}$\ecv@mobile
  \ifx\@empty\ecv@telephone\else\qquad\includegraphics[width=\ecv@iconwidth]{ic_phone_home} \ecv@telephone\fi
+ \ifx\@empty\ecv@skype\else\qquad\includegraphics[width=\ecv@iconwidth]{ic_skype} \ecv@skype\fi
 \par\vspace{5pt}
 \fi
 \ifx\@empty\ecv@emailid\else
@@ -422,7 +425,7 @@ $\begin{array}{@{}l}\includegraphics[width=\ecv@iconwidth]{ic_mobile}\end{array}
 $\begin{array}{@{}l}\includegraphics[width=\ecv@iconwidth]{ic_url}\end{array}$\ecv@homepage\par\vspace{5pt}
 \fi
 \ifx\@empty\ecv@github\else
-$\begin{array}{@{}l}\includegraphics[width=\ecv@iconwidth]{ic_github}\end{array}$\ecv@github\par\vspace{10pt}
+$\begin{array}{@{}l}\includegraphics[width=\ecv@iconwidth]{ic_github}\end{array}$\ecv@github\par\vspace{5pt}
 \fi
 \ifx\@empty\ecv@linkedin\else
 $\begin{array}{@{}l}\includegraphics[width=\ecv@iconwidth]{ic_linkedin}\end{array}$\ecv@linkedin\par\vspace{10pt}
